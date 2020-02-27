@@ -9,7 +9,7 @@
 
 30.times do 
   Destination.create({
-    name: Faker::GameOfThrones.city,
+    name: Faker::TvShows::GameOfThrones.city,
     country: Faker::Address.country
   })
 end
@@ -26,7 +26,7 @@ end
     Post.create({
       title: Faker::Hipster.sentence(3),
       content: Faker::Hipster.paragraphs(4),
-      likes: 0,
+      likes: rand(1..9928),
       blogger: blogger,
       destination: Destination.all.sample
     })
