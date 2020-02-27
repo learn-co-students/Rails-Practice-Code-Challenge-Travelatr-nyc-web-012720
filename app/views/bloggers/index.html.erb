@@ -1,0 +1,6 @@
+<h1>ALL BLOGGERS</h1>
+
+
+<% @bloggers.each do |blogger| %>
+    <p><%= link_to blogger.name, blogger %></p>
+<% end %>

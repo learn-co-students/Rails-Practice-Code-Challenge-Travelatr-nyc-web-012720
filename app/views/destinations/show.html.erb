@@ -1,0 +1,6 @@
+<h1><%= @destination.name %></h1>
+<p>Located in: <%= @destination.country %></p>
+<p>Featured Post: <%= link_to @destination.hottest_post.title, @destination.hottest_post if @destination.posts.first %></p>
+<p>Average Age of Bloggers: <%= @destination.average_age %></p>
+
+<%= button_to "DELETE DESTINATION", @destination, method: :delete %>
