@@ -8,7 +8,8 @@ class PostsController < ApplicationController
     end
 
     def create
-
+        @post = Post.create(post_params)
+        redirect_to post_path(@post)
     end
 
     def edit
@@ -18,9 +19,16 @@ class PostsController < ApplicationController
     end
 
     def update
-
+        if @post.likes > 0
+            @post.increment!(:likes)
+            redirect_to post_path
+        else 
+            params[:post][:likes] = params[:post][:likes].to_i
+            @post.update(post_params) 
+            redirect_to post_path
+        end
     end
-
+    
     def show
         @blogger = @post.blogger
         @destination = @post.destination
@@ -32,4 +40,7 @@ class PostsController < ApplicationController
      @post = Post.find(params[:id])
     end
 
+    def post_params
+        params.require(:post).permit(:title, :content, :blogger_id, :destination_id, :likes)
+    end
 end

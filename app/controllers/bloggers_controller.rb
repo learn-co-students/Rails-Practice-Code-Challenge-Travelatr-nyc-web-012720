@@ -7,6 +7,7 @@ class BloggersController < ApplicationController
     def show
         @blogger = Blogger.find(params[:id])
         @likes = @blogger.total_likes
+        @top_five = @blogger.top_five_likes
     end
 
     def new

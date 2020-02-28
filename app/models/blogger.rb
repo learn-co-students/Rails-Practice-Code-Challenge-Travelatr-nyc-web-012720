@@ -18,20 +18,8 @@ class Blogger < ApplicationRecord
        result = Blogger.find(blogger) 
     end
 
-#     def most_destination
-#         #find the likes quantity for each country
-#         #sort by the most to less
-#         #conver that to obj
-#         result = []
-#         # count = Hash.new
-#         self.destinations.each do |post|
-#             post_count = Post.where(destination_id: post.id).count 
-
-#             end
-#        end
-#        result
-#     end
+    def top_five_likes
+      result = self.destinations.sort_by{|dest| Post.where(destination_id: dest.id).count }
+      result.reverse
+    end
 end
-
-
-{:object => 1}

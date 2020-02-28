@@ -24,16 +24,16 @@ Blogger:
 2. []Users should be able to see the profile page of a blogger. On this page, a user should see:
 	<!-- [x]- The total likes on all of that blogger's posts -->
 	<!-- [x]- A link to that blogger's featured post (the post with the most likes) -->
-	[]- **BONUS** A list of that user's top 5 most written about destinations (the destinations with the most posts)
+	<!-- [x]- **BONUS** A list of that user's top 5 most written about destinations (the destinations with the most posts) -->
 
 Destination:
-
-<!-- 1. [x]Users should be able to see a destination profile page. On this page, a user should see:
+<!-- 
+1. [x]Users should be able to see a destination profile page. On this page, a user should see:
 	[x]- The most recent 5 posts written about this destination
 	[x]- A link to a featured post (this destination's post with the most likes)
-	[x]- The average age of all unique bloggers who have written about this destination.
+	[x]- The average age of all unique bloggers who have written about this destination. -->
 
-Post: -->
+Post:
 
 <!-- 1. [x]Users should be able to create and edit a post
 	[x]- Users should be able to select a blogger from a dropdown menu

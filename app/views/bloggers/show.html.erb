@@ -16,3 +16,8 @@
 <%= @likes %>
 <br>
 <br>
+<label for="top_5">Blogger's top five most written about destinations</label> 
+<br>
+<% @top_five.each do |destination| %>
+<li><%= destination.name %></li> 
+<% end %>
