@@ -1,0 +1,22 @@
+<h1>blogger's new page</h1>
+<% if @error %>
+<% @error.each do |message| %>
+<p><%= message %></p>
+<% end %>
+<% end %> 
+
+<%= form_for @blogger do |f| %>
+<%= f.label :name, "Blogger's name: " %>
+<%= f.text_field :name %>
+<br>    
+<br>
+<%= f.label :age, "Blogger's age: " %>
+<%= f.number_field :age %>
+<br>    
+<br>
+<%= f.label :bio, "Blogger's bio: " %>
+<%= f.text_area :bio %>
+<br>    
+<br>
+<%= f.submit %>
+<% end %>
