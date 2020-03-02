@@ -1,0 +1,24 @@
+<h1>Destination's show page</h1>
+<h3>
+<label for="top_five_posts">Most recent's posts</label> 
+</h3>
+<% @posts_five.each do |post| %>
+<p>
+<ul>
+<label for="title">Post's title: </label>
+<%= post.title %>
+</ul>
+ </p> 
+ <% end %>
+<br>
+<br>
+ <h3>
+ <label for="most_liks_post">Most likes's post</label> 
+ <p><%= link_to @most_likes.title, post_path %></p>
+ </h3>
+
+ <h3>
+ <label for="avearage_age">Average age's who wrote this blogs:  </label>
+ <strong><%= @average_age_bloggers %></strong> 
+ </h3>
+

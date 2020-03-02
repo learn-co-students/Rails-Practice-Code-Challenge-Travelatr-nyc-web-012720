@@ -1,0 +1,24 @@
+<h1>Post's show page!</h1>
+
+<h3>Post Title: <%= @post.title %></h3>
+<p> <%= @post.content[1..-1]%></p>
+<p>
+<label for="blogger">Author: </label>    
+<%= link_to @blogger.name, blogger_path %></p> 
+<p>
+<label for="destination">Destination: </label>    
+<%= link_to @destination.name, destination_path %></p> 
+<p>
+  
+<p>
+<label for="likes">Like total: </label>
+<%= @post.likes %>
+</p> 
+<p>
+
+<label for="likes_button">Like it? </label>
+<%= form_for @post do |f| %>
+  <%= f.hidden_field :likes, value: 1 %>
+  <%= f.submit 'like!' %>
+<% end %>
+</p> 

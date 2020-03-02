@@ -1,0 +1,23 @@
+<h1>Blogger show page</h1>
+
+<label for="name">Blogger's name: </label> 
+<%= @blogger.name %>
+<br>
+<br>
+<label for="age">Blogger's age: </label> 
+<%= @blogger.age %>
+<br>
+<br>
+<label for="bio">Blogger's bio: </label> 
+<%= @blogger.bio %>
+<br>
+<br>
+<label for="likes">Blogger's likes: </label> 
+<%= @likes %>
+<br>
+<br>
+<label for="top_5">Blogger's top five most written about destinations</label> 
+<br>
+<% @top_five.each do |destination| %>
+<li><%= destination.name %></li> 
+<% end %>

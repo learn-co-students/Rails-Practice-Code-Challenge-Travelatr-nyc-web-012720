@@ -5,7 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Destination.destroy_all
+puts "Creating destinations"
+Blogger.destroy_all
+puts "Creating bloggers"
+Post.destroy_all
+puts "Creating posts"
 
 30.times do 
   Destination.create({

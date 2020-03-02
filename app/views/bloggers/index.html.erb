@@ -1,0 +1,10 @@
+<h1>Bloggersssss</h1>
+
+<% @bloggers.each do |blog| %>
+<%= link_to blog.name, blog %> <br>
+<% end %>
+<br>
+<br>
+<label for="total_likes">Most Likes' blogger </label> 
+<h5><%= link_to @best_likes.name, blogger_path(@best_likes.id)%></h5>
+
